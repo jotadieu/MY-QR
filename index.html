@@ -80,7 +80,7 @@
         function updateCounter() {
             const birthDate = new Date('1987-08-16T00:00:00');
             console.log("Fecha de nacimiento usada:", birthDate); // Verificar formato
-            if (isNaN(birthDate)) {
+            if (isNaN(birthDate.getTime())) { // Comprobar si la fecha es válida
                 console.error("Error: Fecha de nacimiento no válida.");
                 document.getElementById("loading").textContent = "Error en la fecha de nacimiento.";
                 return;
