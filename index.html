@@ -44,7 +44,7 @@
 </head>
 <body>
     <h1>Tiempo Vivido</h1>
-    <div class="counter" id="counter"></div>
+    <div class="counter" id="counter">Cargando...</div>
     <div class="divider"></div>
     <div class="footer">El tiempo es lo más valioso, hazlo tuyo.</div>
 
@@ -67,13 +67,14 @@
         }
 
         function updateCounter() {
-            const birthDate = new Date('1987-08-16'); // Cambia esta fecha si es necesario
+            const birthDate = new Date('1987-08-16T00:00:00'); // Fecha de nacimiento exacta
             const time = timeSince(birthDate);
 
             const counterText = ${time.years} Años, ${time.days} Días, ${time.hours} Horas, ${time.minutes} Minutos, ${time.seconds} Segundos;
             document.getElementById("counter").textContent = counterText;
         }
 
+        // Actualizar el contador cada segundo
         setInterval(updateCounter, 1000);
         updateCounter();
     </script>
