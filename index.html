@@ -67,7 +67,7 @@
             const hours = Math.floor(minutes / 60);
             const days = Math.floor(hours / 24);
             const years = Math.floor(days / 365);
-
+        }
             return {
                 years: years,
                 days: days % 365,
@@ -75,7 +75,6 @@
                 minutes: minutes % 60,
                 seconds: seconds % 60
             };
-        }
 
         function updateCounter() {
             const birthDate = new Date('1987-08-16T00:00:00');
